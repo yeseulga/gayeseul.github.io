@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import ThemeToggle from './ThemeToggle';
 
 const navItems = [
   { id: 'about-me', label: 'About Me' },
@@ -54,16 +55,19 @@ const Navigation = () => {
           >
             Portfolio
           </button>
-          <div className="hidden sm:flex items-center gap-6">
-            {navItems.map((item) => (
-              <button
-                key={item.id}
-                onClick={() => scrollToSection(item.id)}
-                className={`nav-link ${activeSection === item.id ? 'nav-link-active' : ''}`}
-              >
-                {item.label}
-              </button>
-            ))}
+          <div className="flex items-center gap-6">
+            <div className="hidden sm:flex items-center gap-6">
+              {navItems.map((item) => (
+                <button
+                  key={item.id}
+                  onClick={() => scrollToSection(item.id)}
+                  className={`nav-link ${activeSection === item.id ? 'nav-link-active' : ''}`}
+                >
+                  {item.label}
+                </button>
+              ))}
+            </div>
+            <ThemeToggle />
           </div>
         </div>
       </div>
