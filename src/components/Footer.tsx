@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="section-container">
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4">
           <p className="text-sm text-muted-foreground">
-            © 2024 Portfolio. All rights reserved.
+            © 2026 Portfolio. All rights reserved.
           </p>
           <div className="flex items-center gap-4">
             <a
